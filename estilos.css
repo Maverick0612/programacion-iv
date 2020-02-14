@@ -1,0 +1,60 @@
+h1{
+text-align: 150px;
+color: rgb(14, 8, 1);
+text-decoration-style: wavy;
+margin-left: 100px;
+margin-top: 40px;
+
+}
+div{
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+body{
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 10px;
+
+}
+
+body > h1{
+    background-color: rgb(120, 214, 12) ;
+    margin: 10px;
+}
+input{
+    height: 24px;
+    border: 1px solid rgb(4, 15, 4);
+    border-radius: 5px;
+}
+input[type=submit],
+input[type=button],
+input[type=file]{
+    background-color: rgb(66, 78, 250);
+    color: rgb(10, 2, 2);
+    text-transform: uppercase;
+    font-weight: bolder;
+    height: 32px;
+}
+input[type=submit]:hover,
+input[type=button]:hover,
+input[type=file]:hover{
+    color:  rgba(238, 231, 238, 0.863);
+    background-color: rgb(218, 97, 16);
+}
+input[type=text]:invalid,
+input[type=date]:invalid,
+input[type=file]:invalid,
+input[type=url]:invalid,
+input[type=tel]:invalid{
+    background-color: rgb(15, 5, 5);
+    color: rgb(20, 236, 121);
+}
+input[type=text]:valid, 
+input[type=date]:valid, 
+input[type=file]:valid,
+input[type=url]:valid,
+input[type=tel]:valid{
+    background-color: rgb(12, 226, 12);
+    color: rgb(241, 229, 229);
+}
