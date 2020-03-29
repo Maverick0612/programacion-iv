@@ -1,41 +1,44 @@
-var $ = el => document.querySelector(el);
+var $ = el => document.querySelectorAll(el), 
+    id = el => document.getElementById(el), 
+    clase = el => document.querySelector(el), 
+    script = el => document.createElement(el);
+
 document.addEventListener("DOMContentLoaded", event => {
-   
-    let Alumnos = document.getElementById("alumnos"); // Instanciamos los elementos
-    let Docentes = document.getElementById("docentes"); //
-
-    //SE AGREGAN LOS EVENTOS LISTENER PARA CADA VISTA
-    Alumnos.addEventListener("click", e=>{
-        e.stopPropagation();
-        let modulo = "alumnos";
-        colocarVista(modulo);
-
-    });
-
-    Docentes.addEventListener("click", e=>{
-        e.stopPropagation();
-        let modulo = "docentes";
-        colocarVista(modulo);
     
-    });
-}); 
+    event.preventDefault();
 
-// ESTA FUNCION HACE LA PETICION Y COLOCA LA VISTA SEGUN EL MODULO QUE SE LE HA SIFO ENVIADO
- function colocarVista(modulo){
+    var Modulos = $(".mostrar");
 
-    fetch(`public/vistas/${modulo}/${modulo}.html`).then( resp => resp.text()).then( resp => {
+    for (let i = 0; i < Modulos.length; i++) {
+        Modulos[i].addEventListener("click",mostrarInformacion);
+        
+    }
 
-        document.getElementById(`vistas-${modulo}`).innerHTML = resp;
-        let btnCerrar = $(".close");
+    function mostrarInformacion(){
+        
+        let dataset = this.dataset.modulo;
 
-        btnCerrar.addEventListener("click", event => {
-            $(`#vistas-${modulo}`).innerHTML = "";
-        });
-
-        let cuerpo = $("body"), script = document.createElement("script");
-        script.src = `public/vistas/${modulo}/${modulo}.js`;
-        cuerpo.appendChild(script);
+        fetch(`public/vistas/${dataset}/${dataset}.html`).then( resp => resp.text() ).then( resp => {
             
-    });
+            id(`vista-${dataset}`).innerHTML = resp;
+            console.log(dataset);
+            
+            let btnCerrar = clase(`.close-${dataset}`);
 
- }
+            btnCerrar.addEventListener("click", event => {
+
+                id(`vista-${dataset}`).innerHTML = "";
+            });
+            
+            let js = script("script");
+            
+            js.src = `public/vistas/${dataset}/${dataset}.js`;
+
+            clase("body").appendChild(js);
+
+        });
+        
+    }
+
+
+});
