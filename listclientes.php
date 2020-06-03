@@ -1,11 +1,11 @@
 
 
 <?php
-//entry.php
+ob_start();
 session_start();
-if(!isset($_SESSION["username"]))
-{
-     header("location:index.php?action=login");
+require_once 'config.php'; 
+if(!isset($_SESSION['logged_in'])){
+	header('Location: index.php');
 }
 require 'header.php';
 ?>

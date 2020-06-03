@@ -1,10 +1,4 @@
 <?php
-//entry.php
-session_start();
-if(!isset($_SESSION["username"]))
-{
-     header("location:index.php?action=login");
-}
 require 'header.php';
 ?>
 <div class="container">

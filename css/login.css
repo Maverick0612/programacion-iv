@@ -1,112 +1,98 @@
-.form-container{
-    color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: rgba(50,64,77,.90);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+body {
+	background: #eee !important;	
 }
-.group-material-login{ 
-    position:relative; 
-    margin-bottom:25px; 
+
+.login-form{
+	margin:4% auto 0;
+	max-width:440px;
 }
-.material-login-control,
-.material-control-login{
-  background-color: transparent;
-  font-size:17px;
-  padding:10px 10px 10px 5px;
-  display:block;
-  width:100%;
-  border:none;
-  border-bottom:1px solid #fff;
-  outline:none;
+
+.login-form h1{
+	font-size: 30pt;
+	font-weight: 700;
+    letter-spacing: -1px;
+    font-style: oblique;
 }
-.material-login-control:focus{ outline:none; }
-.group-material-login label{
-  color:#fff; 
-  font-size:17px;
-  font-weight:normal;
-  position:absolute;
-  pointer-events:none;
-  left:5px;
-  top:10px;
-  transition:all 0.2s ease; 
-  -moz-transition:all 0.2s ease; 
-  -webkit-transition:all 0.2s ease;
+
+.form-header,.form-footer{
+	background-color: rgba(255, 255, 255, .8);
+  	border: 1px solid rgba(0,0,0,0.1);
 }
-/* Estado activo */
-input.material-login-control:focus:valid ~ label,
-input.material-login-control:valid ~ label{
-  top:-18px;
-  font-size:13px;
-  color:#fff;
+
+.form-signin{
+	padding: 45px 35px 45px;
+  	background-color: #fff;
+  	border: 1px solid rgba(0,0,0,0.1);  
+  	border-bottom: 0px; 
+  	border-top: 0px;  
 }
-input.material-login-control:focus:invalid:required,
-input.material-login-control:invalid:required{
-  outline: none;
-  box-shadow: none;
+
+.form-register{
+	padding: 45px 35px 45px;
+  	background-color: #fff;
+  	border: 1px solid rgba(0,0,0,0.1);  
+  	border-bottom: 0px; 
+  	border-top: 0px; 
 }
-/*Barra de formularios material desing ================*/
-.bar-login{ position:relative; display:block; width:100%; }
-.bar-login:before, .bar-login:after     {
-  content:'';
-  height:2px; 
-  width:0;
-  bottom:1px; 
-  position:absolute;
-  background:#fff; 
-  transition:all 0.2s ease; 
-  -moz-transition:all 0.2s ease; 
-  -webkit-transition:all 0.2s ease;
+
+.form-header{
+	text-align: center;
+	padding: 15px 40px;
+	border-radius: 10px 10px 0 0;
 }
-.bar-login:before { left:50%; }
-.bar-login:after { right:50%; }
-input.material-login-control:focus ~ .bar-login:before, input.material-login-control:focus ~ .bar-login:after {
-  width:50%;
+.form-header i{font-size:60px;}
+.form-footer {
+	padding: 15px 40px;	
 }
-.btn-login{
-    background-color: transparent;
-    text-align: center;
-    border: none;
-    box-shadow: none;
-    font-size: 19px;
-    line-height: 19px;
-    color: #fff;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    bottom: 3%;
-    right: 3%;
+.form-signin-heading{
+	margin-bottom: 30px;
 }
-.btn-login:hover{
-    border: none;
-    box-shadow: none;
+.bt-login{
+	background-color: #3498db;
+    color: #ffffff;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    transition: background-color 300ms linear 0s;
 }
-.btn-login:focus,
-.btn-login:active{
-    outline: none;
-    border: none;
-    box-shadow: none;
+.form-signin .form-control, .form-register .form-control{
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
 }
-label{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
+.form-signin .form-control:focus, .form-register .form-control:focus {
+  z-index: 2;
 }
-.radio-inline label:hover{
-    cursor: pointer;
+.form-register input{
+	border: 1px solid #ddd;
+    border-radius: 0;
+    color: #333;
+    height: 43px;
+    margin-bottom: 10px;
+    padding-left: 20px;
 }
-select.material-control-login{
-    -ms-appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    background: #444F55 url(../assets/icons/SelectMaterialIndicator-white.png) no-repeat scroll right 0.75rem center / 13px 8px;
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
-select.material-control-login:hover{
-    cursor: pointer;
+.form-signin input[type="password"] {
+  margin-bottom: 30px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
+i{margin-right: 4%;}
+a{text-decoration: none;color:#333;}
+
+.has-error{color:#ff0000 !important;}
+.has-success{color:#78b310 !important;}
+.has-error input{border:1px solid red !important;}
+.has-success input{border:1px solid #78b310 !important;}
+
+.message_success{background-color: #78b310; color:#fff;padding: 5px;}
+.message_error{background-color: #e74c3c; color:#fff;padding: 5px;}
+h1{font-family: Pacifico;}

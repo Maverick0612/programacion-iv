@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,9 +19,12 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/main.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="413a740a-07fc-46d0-9d1f-70833036d1a5";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-
-
 </head>
 <body>
     <div class="navbar-lateral full-reset">
@@ -38,7 +42,7 @@
             </div>
             <div class="full-reset nav-lateral-list-menu">
                 <ul class="list-unstyled">
-                    <li><a href="index.php"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
+                    <li><a href="inicio.php"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
                     <li>
                         <div class="dropdown-menu-button"><i class="zmdi zmdi-case zmdi-hc-fw"></i>&nbsp;&nbsp; Funciones <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw"></i></div>
                         <ul class="list-unstyled">
@@ -62,12 +66,20 @@
                 <figure>
                    <img src="assets/img/usuario.png" alt="user-picture" class="img-responsive img-circle center-box">
                </figure>
-               <li style="color:#fff; cursor:default;">
-               <?php
-               echo '<span class="all-tittles">'.$_SESSION["username"].'</span>';
-               ?>
-            </li>
-            <li  class="tooltips-general exit-system-button" data-href="logout.php" data-placement="bottom" title="Salir del sistema">
+					<li class="dropdown">
+						<a style="color:#fff" href="#" data-toggle="dropdown" class="dropdown-toggle">
+							Hola,  
+							
+						<?php if($_SESSION['logged_in']) { ?>
+							<?php echo $_SESSION['name']; ?>
+							<span class="caret"></span>
+						</a>
+						<ul role="menu" class="dropdown-menu">
+							<li> <a href="account.php">Mi cuenta</a> </li>
+						</ul>
+						<?php } ?>
+					</li>
+                    <li  class="tooltips-general exit-system-button" data-href="logout.php" data-placement="bottom" title="Salir del sistema">
                 <i class="zmdi zmdi-power"></i>
             </li>
             
