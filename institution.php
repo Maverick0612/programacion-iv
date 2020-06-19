@@ -12,6 +12,11 @@ require 'header.php';
       <h1 class="all-tittles">Sistema Bufete <small>Administración Institución</small></h1>
   </div>
 </div>
+
+
+
+
+
 <div class="container-fluid">
     <ul class="nav nav-tabs nav-justified"  style="font-size: 17px;">
       <li role="presentation" class="active"><a href="institution.php">Institución</a></li>
@@ -32,6 +37,10 @@ require 'header.php';
         </div>
     </div>
 </div>
+
+
+<form method="POST" name="container-fluid" action="logica/guardar.php">
+
 <div class="container-fluid">
     <div class="container-flat-form">
         <div class="title-flat-form title-flat-blue">Guardar datos de la institución</div>
@@ -39,31 +48,31 @@ require 'header.php';
             <div class="row">
              <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                 <div class="group-material">
-                    <input type="text" class="material-control tooltips-general" placeholder="Código de infraestructura" required="" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Solo números, máximo 10 caracteres">
+                    <input type="text" name="codigo" class="material-control tooltips-general" placeholder="Código de infraestructura" required="" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Solo números, máximo 10 caracteres">
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label>Código infraestructura</label>
                 </div>
                 <div class="group-material">
-                    <input type="text" class="material-control tooltips-general" placeholder="Nombre de la institución" required="" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el nombre de la institución">
+                    <input type="text" name="nombreinsti" class="material-control tooltips-general" placeholder="Nombre de la institución" required="" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el nombre de la institución">
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label>Nombre de la institución</label>
                 </div>
                 <div class="group-material">
-                    <input type="text" class="material-control tooltips-general" placeholder="Departamento de la institución" required="" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="20" data-toggle="tooltip" data-placement="top" title="Escriba el departamento">
+                    <input type="text" name="departamentos" class="material-control tooltips-general" placeholder="Departamento de la institución" required="" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="20" data-toggle="tooltip" data-placement="top" title="Escriba el departamento">
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label>Departamento</label>
                 </div>
                 <div class="group-material">
-                    <input type="text" class="material-control tooltips-general" placeholder="Teléfono de la institución" required="" pattern="[0-9]{8,8}" maxlength="8" data-toggle="tooltip" data-placement="top" title="Solo 8 números">
+                    <input type="text" name="telefonos" class="material-control tooltips-general" placeholder="Teléfono de la institución" required="" pattern="[0-9]{8,8}" maxlength="8" data-toggle="tooltip" data-placement="top" title="Solo 8 números">
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label>Teléfono</label>
                 </div>
                 <div class="group-material">
-                    <input type="text" class="material-control tooltips-general" placeholder="Año" required="" pattern="[0-9]{1,4}" maxlength="4" data-toggle="tooltip" data-placement="top" title="Solo números, máximo 4 caracteres">
+                    <input type="text" name="años" class="material-control tooltips-general" placeholder="Año" required="" pattern="[0-9]{1,4}" maxlength="4" data-toggle="tooltip" data-placement="top" title="Solo números, máximo 4 caracteres">
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label>Año</label>

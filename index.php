@@ -54,6 +54,17 @@ require_once 'config.php';
 			<form id="login-form" method="post" class="form-signin" role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 				<input name="email" id="email" type="email" class="form-control" placeholder="Correo electrónico" autofocus> 
 				<input name="password" id="password" type="password" class="form-control" placeholder="Contraseña"> 
+
+				<p>
+
+    				
+
+    			<label><input type="checkbox" name="cb-terminosservicio" required> Acepto <a href="terminos.php">Terminos y Condiciones</a></label><br>
+
+  				</p>
+  				<br>
+
+  				<p>
 				<button class="btn btn-block bt-login" type="submit" id="submit_btn" data-loading-text="Iniciando....">Iniciar sesión</button>
 			</form>
 			<div class="form-footer">

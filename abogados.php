@@ -40,6 +40,12 @@ require 'header.php';
                 </div>
             </div>
         </div>
+
+
+        <form method="POST" name="container-fluid" action="logica/guardarabo.php">
+
+
+
         <div class="container-fluid">
             <div class="container-flat-form">
                 <div class="title-flat-form title-flat-blue">Agregar un Abogado</div>
@@ -47,43 +53,43 @@ require 'header.php';
                     <div class="row">
                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el ID de Abogado"  required="" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="20" data-toggle="tooltip" data-placement="top" title="Escribe aquí el ID de Abogado">
+                                <input type="text" name="idabo" class="material-control tooltips-general" placeholder="Escribe aquí el ID de Abogado"  required="" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="20" data-toggle="tooltip" data-placement="top" title="Escribe aquí el ID de Abogado">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>ID Abogado</label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el ID de Protocolo" required="" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe aquí el ID de Protocolo">
+                                <input type="text" name="idproto" class="material-control tooltips-general" placeholder="Escribe aquí el ID de Protocolo" required="" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe aquí el ID de Protocolo">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>ID Protocolo</label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el ID de Procesos" required="" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe aquí el ID de Procesos">
+                                <input type="text" name="idproceso" class="material-control tooltips-general" placeholder="Escribe aquí el ID de Procesos" required="" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe aquí el ID de Procesos">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>ID Procesos</label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el ID de Documento" required="" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe aquí el ID de Documento">
+                                <input type="text" name="iddoc" class="material-control tooltips-general" placeholder="Escribe aquí el ID de Documento" required="" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe aquí el ID de Documento">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>ID Documento</label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí ID de Notariales" required="" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe aquí ID de Notariales">
+                                <input type="text" name="idnotar" class="material-control tooltips-general" placeholder="Escribe aquí ID de Notariales" required="" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe aquí ID de Notariales">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>ID Notariales</label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el nombre del abogado" required="" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe aquí el nombre del abogado">
+                                <input type="text" name="nombresss" class="material-control tooltips-general" placeholder="Escribe aquí el nombre del abogado" required="" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe aquí el nombre del abogado">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Nombre </label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el telefono del abogado" required="" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe aquí el telefono del abogado">
+                                <input type="text" name="telefonoo" class="material-control tooltips-general" placeholder="Escribe aquí el telefono del abogado" required="" pattern="[0-9]{8,8}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe aquí el telefono del abogado">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Telefono </label>

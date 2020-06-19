@@ -40,6 +40,12 @@ require 'header.php';
                 </div>
             </div>
         </div>
+
+
+        <form method="POST" name="container-fluid" action="logica/guardarcasos.php">
+
+
+
         <div class="container-fluid">
             <div class="container-flat-form">
                 <div class="title-flat-form title-flat-blue">Agregar un nuevo caso.</div>
@@ -47,49 +53,49 @@ require 'header.php';
                     <div class="row">
                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                         <div class="group-material">
-                            <input type="text" class="material-control tooltips-general" placeholder="ID del caso" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el id del caso">
+                            <input type="text" name="idcaso" class="material-control tooltips-general" placeholder="ID del caso" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el id del caso">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>ID Caso</label>
                         </div>
                         <div class="group-material">
-                            <input type="text" class="material-control tooltips-general" placeholder="ID del abogado" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el id del abogado">
+                            <input type="text" name="idabo" class="material-control tooltips-general" placeholder="ID del abogado" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el id del abogado">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>ID Abogado</label>
                         </div>
                         <div class="group-material">
-                            <input type="text" class="material-control tooltips-general" placeholder="ID del cliente" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el id del cliente">
+                            <input type="text" name="idcliente" class="material-control tooltips-general" placeholder="ID del cliente" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el id del cliente">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>ID Cliente</label>
                         </div>
                         <div class="group-material">
-                            <input type="text" class="material-control tooltips-general" placeholder="ID del protocolo" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el id del protocolo">
+                            <input type="text" name="idproto" class="material-control tooltips-general" placeholder="ID del protocolo" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el id del protocolo">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>ID Protocolo</label>
                         </div>
                         <div class="group-material">
-                            <input type="text" class="material-control tooltips-general" placeholder="ID del proceso" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el id del proceso">
+                            <input type="text" name="idproceso" class="material-control tooltips-general" placeholder="ID del proceso" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el id del proceso">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>ID Proceso</label>
                         </div>
                         <div class="group-material">
-                            <input type="text" class="material-control tooltips-general" placeholder="ID del notario" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el id del notario">
+                            <input type="text" name="idnotario" class="material-control tooltips-general" placeholder="ID del notario" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el id del notario">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>ID Notario</label>
                         </div>
                         <div class="group-material">
-                            <input type="text" class="material-control tooltips-general" placeholder="Nombre del caso" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el nombre del caso">
+                            <input type="text" name="nombresss" class="material-control tooltips-general" placeholder="Nombre del caso" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el nombre del caso">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>Nombre</label>
                         </div>
                         <div class="group-material">
-                            <input type="text" class="material-control tooltips-general" placeholder="Estado del caso" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el estado del caso">
+                            <input type="text" name="estcaso" class="material-control tooltips-general" placeholder="Estado del caso" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el estado del caso">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>Estado Caso</label>

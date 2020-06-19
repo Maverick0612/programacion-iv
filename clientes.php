@@ -40,6 +40,11 @@ require 'header.php';
       </div>
   </div>
 </div>
+
+
+<form method="POST" name="container-fluid" action="logica/guardarcliente.php">
+
+
 <div class="container-fluid">
     <div class="container-flat-form">
         <div class="title-flat-form title-flat-blue">Agregar un nuevo cliente</div>
@@ -47,31 +52,31 @@ require 'header.php';
             <div class="row">
              <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                 <div class="group-material">
-                    <input type="text" class="material-control tooltips-general" placeholder="ID Cliente" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el id del cliente">
+                    <input type="text" name="idcliente" class="material-control tooltips-general" placeholder="ID Cliente" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el id del cliente">
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label>IDCliente</label>
                 </div>
                 <div class="group-material">
-                    <input type="text" class="material-control tooltips-general" placeholder="Nombre de cliente" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el nombre del cliente">
+                    <input type="text" name="nombress" class="material-control tooltips-general" placeholder="Nombre de cliente" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el nombre del cliente">
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label>Nombre</label>
                 </div>
                 <div class="group-material">
-                    <input type="text" class="material-control tooltips-general" placeholder="Dirección de cliente" required="" maxlength="70" data-toggle="tooltip" data-placement="top" title="Escribe la dirección del cliente">
+                    <input type="text" name="direccions" class="material-control tooltips-general" placeholder="Dirección de cliente" required="" maxlength="70" data-toggle="tooltip" data-placement="top" title="Escribe la dirección del cliente">
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label>Dirección</label>
                 </div>
                 <div class="group-material">
-                    <input type="text" class="material-control tooltips-general" placeholder="Teléfono de cliente" required="" pattern="[0-9]{8,8}" maxlength="8" data-toggle="tooltip" data-placement="top" title="Solo números, mínimo 8 dígitos">
+                    <input type="text" name="telefonos" class="material-control tooltips-general" placeholder="Teléfono de cliente" required="" pattern="[0-9]{8,8}" maxlength="8" data-toggle="tooltip" data-placement="top" title="Solo números, mínimo 8 dígitos">
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label>Teléfono</label>
                 </div>
                 <div class="group-material">
-                    <input type="text" class="material-control tooltips-general" placeholder="DUI" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Ingrese numero de DUI del cliente">
+                    <input type="text" name="duiss" class="material-control tooltips-general" placeholder="DUI" required="" maxlength="50" data-toggle="tooltip" pattern="[0-9]{9,9}" data-placement="top" title="Ingrese numero de DUI del cliente sin guion...123456789">
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label>DUI</label>
