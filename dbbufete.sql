@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-06-2020 a las 01:01:51
+-- Tiempo de generación: 22-06-2020 a las 03:08:55
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.3
 
@@ -38,13 +38,6 @@ CREATE TABLE `abogados` (
   `telefono` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `abogados`
---
-
-INSERT INTO `abogados` (`idabogado`, `idprotocolo`, `idproceso`, `iddocumento`, `idnotariales`, `nombre`, `telefono`) VALUES
-(1111, 1111, 1111, 1111, 1111, 'probando', 12345678);
-
 -- --------------------------------------------------------
 
 --
@@ -62,14 +55,6 @@ CREATE TABLE `casos` (
   `estcaso` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `casos`
---
-
-INSERT INTO `casos` (`idcaso`, `idabogado`, `idcliente`, `idprotocolo`, `idproceso`, `idnotario`, `nombre`, `estcaso`) VALUES
-(1111, 1111, 1111, 1111, 1111, 1111, '0', '0'),
-(2222, 2222, 2222, 2222, 2222, 2222, 'probando', 'abierto');
-
 -- --------------------------------------------------------
 
 --
@@ -83,15 +68,6 @@ CREATE TABLE `cliente` (
   `telefono` int(8) NOT NULL,
   `dui` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `cliente`
---
-
-INSERT INTO `cliente` (`idcliente`, `ncliente`, `direccion`, `telefono`, `dui`) VALUES
-(0, '', 'prueba', 12345678, ''),
-(1111, 'prueba', 'prueba', 12345678, ''),
-(2222, 'prueba', 'prueba', 12345678, '123456789');
 
 -- --------------------------------------------------------
 
